@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="description" content="Addy Mobile Power Wash and More LLC provides power washing, house cleaning, leaf removal, painting, tombstone cleaning for graveyards and more in Utica, Rome and surrounding areas." />
+  <link rel="icon" href="data:," />
+  <title>Addy Mobile Power Wash and More LLC</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Manrope:wght@400;500;600;700&display=swap');
+    :root{
+      color-scheme:light dark;
+      --ink:#10252d; --paper:#f7faf9; --panel:#ffffff; --muted:#52656b;
+      --line:#d6e0df; --aqua:#08a7b5; --aqua-deep:#007a88; --yellow:#ffd23f;
+      --nav:#0b2028; --white:#ffffff; --shadow:0 18px 45px rgba(16,37,45,.14);
+    }
+    @media(prefers-color-scheme:dark){
+      :root{--ink:#ecf8f7;--paper:#08171d;--panel:#10242b;--muted:#b6c9cc;--line:#29434a;--aqua:#29c3cf;--aqua-deep:#69dce3;--yellow:#ffd75a;--nav:#051116;--shadow:0 18px 45px rgba(0,0,0,.32)}
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:"Manrope",sans-serif;line-height:1.55}
+    a{color:inherit}
+    img{display:block;max-width:100%}
+    .hero{position:relative;min-height:700px;display:grid;align-items:end;overflow:hidden;background:var(--nav)}
+    .hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 38%}
+    .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,20,26,.92) 0%,rgba(5,20,26,.72) 45%,rgba(5,20,26,.18) 78%),linear-gradient(0deg,rgba(5,20,26,.82),transparent 48%)}
+    .nav{position:absolute;z-index:3;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:22px clamp(20px,5vw,72px);color:#fff}
+    .brand{max-width:460px;font-family:"Barlow Condensed",sans-serif;font-size:clamp(20px,2.2vw,30px);font-weight:800;line-height:.95;text-transform:uppercase;letter-spacing:.02em}
+    .nav-phone{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;color:#09222a;background:var(--yellow);padding:12px 18px;clip-path:polygon(8px 0,100% 0,100% calc(100% - 8px),calc(100% - 8px) 100%,0 100%,0 8px)}
+    .hero-content{position:relative;z-index:2;width:min(1180px,100%);margin:0 auto;padding:150px 30px 78px;color:#fff}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:800;letter-spacing:.11em;text-transform:uppercase;color:#a9eef1}
+    .eyebrow:before{content:"";width:34px;height:4px;background:var(--yellow)}
+    h1,h2,h3{font-family:"Barlow Condensed",sans-serif;margin:0;line-height:.96;text-transform:uppercase}
+    h1{font-size:clamp(58px,9.5vw,126px);max-width:920px;letter-spacing:-.035em;margin:18px 0 22px}
+    .hero-copy{max-width:650px;font-size:clamp(18px,2.1vw,25px);color:#e1eded;margin:0 0 30px}
+    .actions{display:flex;gap:14px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 24px;text-decoration:none;font-weight:800;border:2px solid transparent;clip-path:polygon(10px 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%,0 10px)}
+    .btn-primary{background:var(--yellow);color:#10252d}.btn-secondary{border-color:#fff;color:#fff;background:rgba(5,20,26,.28)}
+    .service-band{background:var(--aqua);color:#03282d;display:grid;grid-template-columns:repeat(5,1fr);padding:0 clamp(20px,5vw,72px)}
+    .service-band div{padding:20px 22px;border-right:1px solid rgba(3,40,45,.25);font-family:"Barlow Condensed",sans-serif;font-weight:800;font-size:20px;text-transform:uppercase}.service-band div:last-child{border-right:0}
+    .section{width:min(1180px,calc(100% - 40px));margin:0 auto;padding:96px 0}
+    .intro{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:end;margin-bottom:46px}
+    h2{font-size:clamp(44px,6vw,74px);letter-spacing:-.02em}.intro p{margin:0;color:var(--muted);font-size:18px;max-width:560px}
+    .services{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+    .service-card{position:relative;min-height:420px;overflow:hidden;background:var(--nav);color:#fff}
+    .service-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .45s ease}
+    .service-card:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(4,22,28,.92),rgba(4,22,28,.08) 72%)}
+    .service-card:hover img{transform:scale(1.025)}
+    .service-copy{position:absolute;z-index:2;left:26px;right:26px;bottom:24px}
+    .service-copy h3{font-size:38px}.service-copy p{margin:7px 0 0;color:#d8e6e7;max-width:440px}
+    .why{background:var(--nav);color:#fff;padding:96px max(20px,calc((100vw - 1180px)/2))}
+    .why-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:center}
+    .why h2{max-width:650px}.why p{color:#bfd1d4;font-size:18px;max-width:610px}
+    .steps{display:grid;gap:0;border-top:1px solid #34515a}
+    .step{display:grid;grid-template-columns:48px 1fr;gap:16px;padding:22px 0;border-bottom:1px solid #34515a}.num{font-family:"Barlow Condensed";font-weight:800;font-size:26px;color:var(--yellow)}.step strong{font-family:"Barlow Condensed";font-size:25px;text-transform:uppercase}.step span{display:block;color:#adc4c7;margin-top:3px}
+    .area{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;background:var(--yellow);color:#10252d;padding:48px clamp(24px,5vw,70px);margin:0 auto}
+    .area h2{font-size:clamp(40px,5vw,65px)}.area p{margin:10px 0 0;font-weight:600;font-size:18px}.area .btn{background:#10252d;color:#fff}
+    .contact{padding:96px 20px;text-align:center}.contact h2{max-width:800px;margin:auto}.contact p{color:var(--muted);font-size:18px}.big-phone{display:inline-block;margin:20px 0 30px;font-family:"Barlow Condensed";font-size:clamp(42px,7vw,82px);line-height:1;font-weight:800;color:var(--aqua-deep);text-decoration-thickness:4px;text-underline-offset:8px}
+    footer{background:var(--nav);color:#b6cacc;padding:28px 20px;text-align:center;font-size:13px}footer strong{color:#fff}details{margin-top:10px}details a{color:#9ce6eb;margin:0 5px}
+    @media(max-width:760px){
+      .hero{min-height:720px}.nav{padding:18px}.brand{max-width:190px;font-size:19px}.nav-phone{font-size:0;padding:11px 13px}.nav-phone:after{content:"Call";font-size:15px}.hero-content{padding:130px 20px 55px}.hero:after{background:linear-gradient(0deg,rgba(5,20,26,.96) 0%,rgba(5,20,26,.7) 62%,rgba(5,20,26,.38) 100%)}
+      h1{font-size:clamp(53px,17vw,76px)}.hero-copy{font-size:18px}.actions .btn{width:100%}.service-band{grid-template-columns:repeat(2,1fr);padding:0}.service-band div{font-size:17px;padding:15px 12px;border-bottom:1px solid rgba(3,40,45,.25)}.service-band div:last-child{grid-column:1/-1;text-align:center}
+      .section{padding:68px 0}.intro,.why-grid{grid-template-columns:1fr;gap:24px}.services{grid-template-columns:1fr}.service-card{min-height:340px}.service-copy h3{font-size:34px}.why{padding-top:68px;padding-bottom:68px}.area{grid-template-columns:1fr;text-align:left}.area .btn{width:100%}.contact{padding:68px 20px}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.service-card img{transition:none}}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <img src="pressure-washing-house.jpg" alt="A professional pressure washing the exterior of a large home" />
+    <div class="nav">
+      <div class="brand">Addy Mobile Power Wash<br>and More LLC</div>
+      <a class="nav-phone" href="tel:+13155701065" aria-label="Call Addy Mobile Power Wash at 315-570-1065">315-570-1065</a>
+    </div>
+    <div class="hero-content">
+      <div class="eyebrow">Utica • Rome • Surrounding areas</div>
+      <h1>Clean outside.<br>Fresh inside.</h1>
+      <p class="hero-copy">Power washing, house cleaning, seasonal cleanup, painting, tombstone cleaning for graveyards and more — one call for the work your property needs.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="tel:+13155701065">Call for a quote</a>
+        <a class="btn btn-secondary" href="sms:+13155701065">Text 315-570-1065</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="service-band" aria-label="Available services">
+    <div>Power washing</div><div>House cleaning</div><div>Leaf removal</div><div>Paint jobs + more</div><div>Tombstone cleaning</div>
+  </div>
+
+  <main id="main">
+    <section class="section" id="services">
+      <div class="intro">
+        <h2>One crew.<br>More gets done.</h2>
+        <p>From grime on the siding to leaves across the yard, Addy Mobile Power Wash and More LLC helps get homes and properties looking cared for again. Call to discuss the job and request a quote.</p>
+      </div>
+      <div class="services">
+        <article class="service-card">
+          <img src="driveway-washing.webp" alt="A worker pressure washing a paved surface beside a home" />
+          <div class="service-copy"><h3>Power washing</h3><p>Exterior surfaces, walkways, driveways and more.</p></div>
+        </article>
+        <article class="service-card">
+          <img src="house-cleaning.jpg" alt="A professional cleaning a kitchen countertop" />
+          <div class="service-copy"><h3>House cleaning</h3><p>Help getting living spaces clean, neat and refreshed.</p></div>
+        </article>
+        <article class="service-card">
+          <img src="leaf-removal.jpg" alt="A grounds worker clearing autumn leaves with a leaf blower" />
+          <div class="service-copy"><h3>Leaf removal</h3><p>Seasonal cleanup that clears the clutter from your property.</p></div>
+        </article>
+        <article class="service-card">
+          <img src="painting.jpg" alt="A crew painting the exterior of a house" />
+          <div class="service-copy"><h3>Painting & more</h3><p>Paint jobs, tombstone cleaning for graveyards and additional property work — ask about what you need.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="why">
+      <div class="why-grid">
+        <div><h2>Tell us the job. We’ll talk through the rest.</h2><p>Every property and project is different. A quick call or text is the easiest way to explain what needs attention and get started.</p></div>
+        <div class="steps">
+          <div class="step"><div class="num">01</div><div><strong>Call or text</strong><span>Share the service, property and location.</span></div></div>
+          <div class="step"><div class="num">02</div><div><strong>Request a quote</strong><span>Talk through the scope of the work.</span></div></div>
+          <div class="step"><div class="num">03</div><div><strong>Set a time</strong><span>Arrange a visit that works for the job.</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="area" aria-label="Service area">
+      <div><h2>Based around Utica & Rome.<br>Ready to travel.</h2><p>Serving Utica, Rome, surrounding areas — and we travel anywhere.</p></div>
+      <a class="btn" href="tel:+13155701065">Check your location</a>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Ready to get the job handled?</h2>
+      <p>Call or text to request a quote.</p>
+      <a class="big-phone" href="tel:+13155701065">315-570-1065</a>
+      <div class="actions" style="justify-content:center">
+        <a class="btn btn-primary" href="tel:+13155701065">Call now</a>
+        <a class="btn" style="background:var(--aqua);color:#05272d" href="sms:+13155701065">Send a text</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>Addy Mobile Power Wash and More LLC</strong> · Utica, Rome & surrounding areas · 315-570-1065
+    <details><summary>Service image sources</summary><a href="https://lavocrm.com/">Power washing</a> · <a href="https://americanstripingandcommercialcoatings.com/dumpster-pad-washing-nashville/">Exterior cleaning</a> · <a href="https://allshineclean.com/maid-richmond-va/">House cleaning</a> · <a href="https://www.ahmad-fm.de/">Leaf removal</a> · <a href="https://housepainter-prospectct.com/author/prospecthousepaintingprosteam/">Painting</a></details>
+  </footer>
+</body>
+</html>
